@@ -10,7 +10,7 @@ public abstract class Villager {
     protected String LastName;
     protected int Age;
     protected Boolean isActive;
-    protected String Profession; // to be set by subclass
+    protected Profession profession; // to be set by subclass
     protected String AssignedBuilding; // set later by player
     protected String Residence; // set later by player
 
@@ -40,8 +40,8 @@ public abstract class Villager {
         return isActive;
     }
 
-    public String getProfession() {
-        return Profession;
+    public Profession getProfession() {
+        return profession;
     }
 
     public String getAssignedBuilding() {
