@@ -8,15 +8,16 @@ public class Farmer extends Villager {
         this.profession = Profession.FARMER;
     }
 
-    // Generates +5 resource every "tick" if assigned to a farm, otherwise only generates +1 resource for any other building.
+    // Generates +5 resource every "tick" if assigned to an AgriDome, otherwise only generates +1 resource for any other building.
     // The building determines the resource being generated.
     @Override
-    protected void performRole() {
-        if (getAssignedBuilding() != null ) { // TODO: replace with getAssignedBuilding instanceof() Farm
-            // TODO: ResourceManager.addResource(5)
-        } else {
-            // TODO: ResourceManager.addResource(1)
+    public void performRole() {
+        if (getAssignedBuilding() != null) {
+            if (getAssignedBuilding() == "AgriDome") {// TODO: replace with getAssignedBuilding instanceof() AgriDome
+                // TODO: assignedBuilding.addResource(5)
+            } else {
+                // TODO: ResourceManager.addResource(1)
+            }
         }
     }
 }
-`
