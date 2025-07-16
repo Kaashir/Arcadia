@@ -12,7 +12,7 @@ public class Farmer extends Villager {
     // The building determines the resource being generated.
     @Override
     public void performRole() {
-        if (getAssignedBuilding() != null) {
+        if (getAssignedBuilding() != null && isActive()) {
             if (getAssignedBuilding() == "AgriDome") {// TODO: replace with getAssignedBuilding instanceof() AgriDome
                 // TODO: assignedBuilding.addResource(5)
             } else {

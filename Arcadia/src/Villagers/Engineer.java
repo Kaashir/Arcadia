@@ -12,7 +12,7 @@ public class Engineer extends Villager {
     // The building determines the resource being generated.
     @Override
     public void performRole() {
-        if (getAssignedBuilding() != null) {
+        if (getAssignedBuilding() != null && isActive()) {
             if (getAssignedBuilding() == "Solar Array") {// TODO: replace with getAssignedBuilding instanceof() SolarArray
                 // TODO: assignedBuilding.addResource(5)
             } else {

@@ -12,8 +12,8 @@ public class Caretaker extends Villager {
     // The building determines the resource being generated.
     @Override
     public void performRole() {
-        if (getAssignedBuilding() != null) {
-            if (getAssignedBuilding() == "Community Grove") {// TODO: replace with getAssignedBuilding instanceof() CommunityGrove
+        if (getAssignedBuilding() != null && isActive()) {
+            if (getAssignedBuilding() == "Community Grove" || getAssignedBuilding() == "Matter Mill") {// TODO: replace with getAssignedBuilding instanceof() CommunityGrove & MatterMill respectively
                 // TODO: assignedBuilding.addResource(5)
             } else {
                 // TODO: ResourceManager.addResource(1)
