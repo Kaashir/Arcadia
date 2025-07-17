@@ -2,6 +2,7 @@ package Buildings;
 
 // base abstract parent class that all subclasses of buildings will inherit from.
 
+import Territories.Territory;
 import Villagers.Villager;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public abstract class Building {
     protected String name;
-    protected String territory; //TODO: Change to Territory territory once Territory class is defined
+    protected Territory territory; //TODO: Change to Territory territory once Territory class is defined
     protected int maxCapacity;
     protected int currentCapacity;
     protected List<Villager> assignedVillagers;
@@ -18,7 +19,7 @@ public abstract class Building {
 
     // default constructor - materialCost and energyUpkeepPerTick to be defined by subclasses
     // TODO: Change String Territory to Territory territory once Territory class is defined
-    public Building(String name, String territory) {
+    public Building(String name, Territory territory) {
         this.name = name;
         this.territory = territory;
         maxCapacity = 5;
@@ -32,7 +33,7 @@ public abstract class Building {
         return name;
     }
 
-    public String getTerritory() {
+    public Territory getTerritory() {
         return territory;
     }
 
@@ -64,6 +65,10 @@ public abstract class Building {
 
     public void setCurrentCapacity(int currentCapacity) {
         this.currentCapacity = currentCapacity;
+    }
+
+    public void setTerritory(Territory territory) {
+        this.territory = territory;
     }
 
     // helper methods
