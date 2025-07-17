@@ -1,11 +1,12 @@
 package Buildings;
 
+import Territories.Territory;
 import Villagers.Profession;
 import Villagers.Villager;
 
 public class CommunityGrove extends Building{
 
-    public CommunityGrove(String name, String territory) {
+    public CommunityGrove(String name, Territory territory) {
         super(name, territory);
         materialCost = 200;
         energyUpkeepPerTick = 10;

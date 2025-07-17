@@ -1,11 +1,12 @@
 package Buildings;
 
+import Territories.Territory;
 import Villagers.Profession;
 import Villagers.Villager;
 
 public class AgriDome extends Building{
 
-    public AgriDome(String name, String territory) {
+    public AgriDome(String name, Territory territory) {
         super(name, territory);
         materialCost = 75;
         energyUpkeepPerTick = 15;
