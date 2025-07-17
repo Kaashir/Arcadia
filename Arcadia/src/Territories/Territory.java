@@ -56,10 +56,15 @@ public abstract class Territory {
     }
 
     public void addBuilding(Building building) {
-        if (buildings.size() < maxBuildings) {
+        if (canAddBuilding(building) && !isFull()) {
             buildings.add(building);
+            building.setTerritory(this);
         } else {
-            System.out.println("Territory is full.");
+            if (isFull()) {
+                System.out.println("Territory is full!");
+            } else {
+                System.out.println("Building type not allowed in this territory!");
+            }
         }
     }
 
@@ -82,15 +87,4 @@ public abstract class Territory {
             return false;
         }
     };
-}
-
-
-
-
-
-
-
-
-
-
 }
