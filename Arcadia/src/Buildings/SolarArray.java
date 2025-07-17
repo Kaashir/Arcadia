@@ -1,11 +1,12 @@
 package Buildings;
 
+import Territories.Territory;
 import Villagers.Profession;
 import Villagers.Villager;
 
 public class SolarArray extends Building {
 
-    public SolarArray(String name, String territory) {
+    public SolarArray(String name, Territory territory) {
         super(name, territory);
         materialCost = 100;
         energyUpkeepPerTick = 5;

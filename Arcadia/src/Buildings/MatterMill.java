@@ -1,11 +1,12 @@
 package Buildings;
 
+import Territories.Territory;
 import Villagers.Profession;
 import Villagers.Villager;
 
 public class MatterMill extends Building{
 
-    public MatterMill(String name, String territory) {
+    public MatterMill(String name, Territory territory) {
         super(name, territory);
         materialCost = 150;
         energyUpkeepPerTick = 20;
