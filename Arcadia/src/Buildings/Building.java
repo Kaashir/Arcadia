@@ -83,7 +83,7 @@ public abstract class Building {
         return currentCapacity <= 0;
     }
 
-    public int getCurrentStaffCount() {
+    public int getCurrentVillagerCount() {
         return assignedVillagers.size();
     }
 
