@@ -81,10 +81,6 @@ public abstract class Territory {
     public abstract List<Class<? extends Building>> getAllowedBuildingTypes();
 
     public boolean canAddBuilding(Building building) {
-        if (getAllowedBuildingTypes().contains(building.getClass())) {
-            return true;
-        } else {
-            return false;
-        }
+        return getAllowedBuildingTypes().contains(building.getClass());
     };
 }
